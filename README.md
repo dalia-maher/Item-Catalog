@@ -1,6 +1,6 @@
 # "Item Catalog" - Item Catalog Web Application
 
-This webiste aims to display a catalog containing a list of categories with their related items using Python data structures. A list of categories and latest added items are displayed and by clicking on any of the categories, a list of items for this  category are displayed. Users can log in to this website by using third-party login either their Google account or Facebook account. Also, A user does not need to be logged in in order to view the categories or items in the catalog. However, only authenticated users have the ability to add, edit, and delete their own items. This project was done as a part of the Full Stack Web Developer Nanodegree on [Udacity](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004)
+This webiste aims to display a catalog containing a list of categories with their related items using Python data structures. A list of categories and latest added items are displayed and by clicking on any of the categories, a list of items for this  category are displayed. Users can log in to this website by using third-party login with either their Google account or Facebook account. Also, A user does not need to be logged in order to view the categories or items in the catalog. However, only authenticated users have the ability to add, edit, and delete their own items. This project was done as a part of the Full Stack Web Developer Nanodegree on [Udacity](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004)
 
 ## Project Setup
 
@@ -38,9 +38,7 @@ cd Item-Catalog
 ```
 python application.py
 ``` 
-7. After the last command, you will be able to browse the application at this URL:
-
-http://localhost:5000/
+9. After the last command, you will be able to browse the application at this URL: http://localhost:5000/
 
 
 ## Project Functionalities
@@ -72,7 +70,7 @@ http://localhost:5000/categories/<int:category_id>/item/<int:catalog_item_id>/JS
 ## Project Contents
 
 ### database-setup.py:
-Python module that sets up the database classes and relations of User, Category and CatalogItem. It uses Sqlite DB.
+Python module that sets up the database classes and relations of User, Category and CatalogItem. It uses SqLite DB.
 
 ### application.py:
 Python module containing the business login of the whole project including login, connection to database, JSON APIs, and the main functionalities of each endpoint in the application.
