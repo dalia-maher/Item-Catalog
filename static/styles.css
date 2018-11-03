@@ -1,0 +1,54 @@
+nav {
+	margin: 0;
+	width: 100%;
+}
+
+em {
+	color: grey;
+}
+
+a {
+	color: red;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul, 
+li {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.navbar-text {
+	font-size: 2rem;
+}
+
+.navbar-profile-image {
+	height: 40px;
+	padding-bottom: 12px;
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 3px rgba(0,0,0,0.24);
+  background: #fff;
+  margin: 0 1rem 2rem 1rem;
+  border-radius: 2px;
+}
+
+.item-card {
+	padding: 1rem;
+}
+
+.img-thumbnail {
+	margin-top: 1rem;
+}
+
+.item-description {
+	padding: 0 3rem;
+}
+
+.main-title {
+	color: black;
+}

@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-text" href="{{url_for('showCatalog') }}">Item Catalog App</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      {% if 'username' not in session %}
+        <li><a href="{{ url_for('showLogin')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      {% elif session.user_id %}
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <img src="{{ session['picture']}}" alt="profile image" class="navbar-profile-image image-responsive pull-left">
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{url_for('showCatalog') }}">Catalog</a></li>
+              <li><a href="{{url_for('disconnect')}}">Logout</a></li>
+            </ul>
+          </li>
+      {% endif %} 
+      </ul>
+  </div>
+<!-- /.container-fluid -->
+</nav>
+

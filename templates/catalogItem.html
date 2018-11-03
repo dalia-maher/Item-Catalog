@@ -1,0 +1,40 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "flashMessage.html" %}
+<div class="row col-md-8 col-md-offset-2">
+	 <div class="card detail-card item-card">
+		<div class="row">
+			<div class="col-md-8">
+				<h2>{{item.name}}<br><small>({{ item.category.name }})</small></h2>
+			</div>
+		</div>
+		<hr>
+		<div class="row item-description">
+			<h4>Price: {{ item.price }} LE</h4>
+		</div>
+		<hr>
+		<div class="row item-description">
+			<h4>Description:</h4>
+			<p> 
+			{{ item.description }}
+			</p>
+		    {% if item.user_id == session.user_id %}
+		    <div class="pull-right">
+		        <a href="{{ url_for('editCatalogItem', category_id=item.category_id, catalog_item_id=item.id) }}">
+		        	<button class="btn btn-default edit">
+						<span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 
+							Edit
+					</button>
+				</a>
+		        <a href="{{ url_for('deleteCatalogItem', category_id=item.category_id, catalog_item_id=item.id) }}">
+		        	<button class="btn btn-danger delete">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span> 
+							Delete
+					</button>
+		        </a>
+		    </div>
+		    {% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}
